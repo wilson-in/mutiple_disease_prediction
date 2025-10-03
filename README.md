@@ -1,116 +1,94 @@
-# Multiple Disease Prediction System
+# 🩺 Multiple Disease Prediction System
 
-A comprehensive system that predicts **Kidney, Liver, and Parkinson’s diseases** using machine learning. Includes data preprocessing, model training, evaluation, a Streamlit web app for inference, and Power BI dashboards for visualization.
-
----
-
-## 🧠 Overview
-
-Healthcare datasets often focus on individual diseases. This project integrates multiple disease prediction in one system, allowing users to input clinical/lab features and predict risk for multiple conditions. The system also provides visual analytics to interpret data, model performance, and feature insights.
+A comprehensive system that predicts **Kidney, Liver, and Parkinson’s diseases** using machine learning.  
+Includes data preprocessing, model training, evaluation, a Streamlit web app for inference, and Power BI dashboards for visualization.
 
 ---
-
-## 🔍 Features
-
-- Preprocess raw datasets: cleaning, encoding, scaling  
-- Train separate models per disease  
-- Save trained models, scalers, metadata & evaluation reports  
-- Deploy a **Streamlit web app** to take inputs and show predictions  
-- Build **Power BI dashboards** for EDA and model performance  
-- Documentation, reproducibility, and modular code
-
----
-
-## 📁 Project Structure
 
 ## 📂 Project Structure
 
-bash
 4-multiple-disease-prediction/
-│── app/                      # Streamlit app for disease prediction
-│   └── streamlit_app.py
-│
-│── data/                     # Datasets
-│   ├── raw/                  # Raw datasets (Kidney, Liver, Parkinson’s)
-│   │   ├── kidney_disease.csv
-│   │   ├── indian_liver_patient.csv
-│   │   └── parkinsons.csv
-│   └── cleaned/              # Preprocessed datasets
-│       ├── kidney_preprocessed.csv
-│       ├── liver_preprocessed.csv
-│       └── parkinsons_preprocessed.csv
-│
-│── models/                   # Trained ML models, scalers & evaluation reports
-│   ├── kidney_model.pkl
-│   ├── liver_model.pkl
-│   ├── parkinsons_model.pkl
-│   ├── kidney_scaler.pkl
-│   ├── liver_scaler.pkl
-│   ├── parkinsons_scaler.pkl
-│   ├── kidney_confusion.png
-│   ├── liver_confusion.png
-│   ├── parkinsons_confusion.png
-│   ├── metadata.json
-│   └── training_reports.json
-│
-│── notebooks/                # Training and experimentation notebooks/scripts
-│   ├── Multiple_Disease_Trainer.py
-│   └── train_models.py
-│
-│── powerbi_report/            # Power BI dashboards & exports
-│   ├── Kidney_Report.pbix
-│   ├── Liver_Report.pbix
-│   ├── Parkinsons_Report.pbix
-│   └── dashboards.pdf
-│
-│── requirements.txt           # Python dependencies
-│── .gitignore                 # Ignored files & folders
-│── README.md                  # Project documentation
-
-
+│── app/                      # Streamlit app for disease prediction  
+│   └── streamlit_app.py  
+│  
+│── data/                     # Datasets  
+│   ├── raw/                  # Raw datasets (Kidney, Liver, Parkinson’s)  
+│   │   ├── kidney_disease.csv  
+│   │   ├── indian_liver_patient.csv  
+│   │   └── parkinsons.csv  
+│   └── cleaned/              # Preprocessed datasets  
+│       ├── kidney_preprocessed.csv  
+│       ├── liver_preprocessed.csv  
+│       └── parkinsons_preprocessed.csv  
+│  
+│── models/                   # Trained ML models, scalers & evaluation reports  
+│   ├── kidney_model.pkl  
+│   ├── liver_model.pkl  
+│   ├── parkinsons_model.pkl  
+│   ├── kidney_scaler.pkl  
+│   ├── liver_scaler.pkl  
+│   ├── parkinsons_scaler.pkl  
+│   ├── kidney_confusion.png  
+│   ├── liver_confusion.png  
+│   ├── parkinsons_confusion.png  
+│   ├── metadata.json  
+│   └── training_reports.json  
+│  
+│── notebooks/                # Training and experimentation notebooks/scripts  
+│   ├── Multiple_Disease_Trainer.py  
+│   └── train_models.py  
+│  
+│── powerbi_report/            # Power BI dashboards & exports  
+│   ├── Kidney_Report.pbix  
+│   ├── Liver_Report.pbix  
+│   ├── Parkinsons_Report.pbix  
+│   └── dashboards.pdf  
+│  
+│── requirements.txt           # Python dependencies  
+│── .gitignore                 # Ignored files & folders  
+│── README.md                  # Project documentation  
 
 ---
 
-## 🧪 Datasets
+## 📊 Datasets
 
-Used 3 datasets from public sources (e.g. UCI / Kaggle):
+Used **3 datasets** from public sources (e.g., UCI / Kaggle):
 
-- **Kidney Disease**  
-- **Indian Liver Patient**  
-- **Parkinson’s Disease**
+- Kidney Disease  
+- Indian Liver Patient  
+- Parkinson’s Disease  
 
-Raw files stored in `data/raw/`; processed & cleaned data in `data/processed/`.
+Raw files stored in `data/raw/`; preprocessed data in `data/cleaned/`.
 
 ---
 
-## 📋 Methodology
+## 🔬 Methodology
 
-**1. Data Preprocessing**  
-- Handle missing values  
-- Encode categorical features (e.g. gender)  
-- Standard scaling of numerical features  
-- Save cleaned datasets for reproducibility  
+1. **Data Preprocessing**  
+   - Handle missing values  
+   - Encode categorical features (e.g., gender)  
+   - Standard scaling for numerical features  
+   - Save cleaned datasets  
 
-**2. Model Training**  
-- Split each disease dataset into train/test (80/20)  
-- Try algorithms like RandomForest, XGBoost, Logistic Regression  
-- Select best model per disease  
-- Save models, scalers, and metadata (feature order + encodings)  
+2. **Model Training**  
+   - Train/test split (80/20)  
+   - Algorithms: RandomForest, XGBoost, Logistic Regression  
+   - Save best models, scalers, and metadata  
 
-**3. Evaluation**  
-- Compute Accuracy, ROC-AUC, Confusion Matrix  
-- Save evaluation reports in `training_reports.json`  
-- Save confusion matrix plots  
+3. **Evaluation**  
+   - Accuracy, ROC-AUC, Confusion Matrix  
+   - Reports saved in `training_reports.json`  
+   - Confusion matrix plots saved as `.png`  
 
-**4. Deployment**  
-- Streamlit app loads metadata and models  
-- User selects disease, enters input values, and obtains prediction  
-- Confusion matrix image shown alongside prediction  
+4. **Deployment**  
+   - Streamlit app loads models & metadata  
+   - User selects disease, enters values, gets prediction  
+   - Confusion matrix image shown  
 
-**5. Visualization (Power BI)**  
-- Load raw datasets and metrics  
-- Build dashboards per disease: class distribution, feature comparison, model performance  
-- Export dashboards to PDF for reporting  
+5. **Visualization (Power BI)**  
+   - Load datasets & metrics  
+   - Build dashboards: distribution, features, performance  
+   - Export dashboards to PDF  
 
 ---
 
@@ -134,6 +112,7 @@ cd app
 streamlit run streamlit_app.py
 # Then open: http://localhost:8501
 
+---
 
 ## 📊 Using Power BI Dashboards
 
@@ -145,47 +124,58 @@ streamlit run streamlit_app.py
 #    - Feature comparisons (e.g., Blood Urea, Bilirubin, Jitter)
 #    - Confusion matrix visuals
 
-# 3. Export dashboards to PDF or embed visualizations into your report
+# 3. Export dashboards to PDF or embed in reports
 
+---
 
 ## 🏆 Results & Performance
 
-# The models/training_reports.json contains performance for each disease model:
+# Reports saved in models/training_reports.json:
 # - Kidney: Accuracy = ..., ROC-AUC = ...
 # - Liver: Accuracy = ..., ROC-AUC = ...
 # - Parkinson’s: Accuracy = ..., ROC-AUC = ...
 
-# Confusion matrix images are saved in /models
+# Confusion matrix plots saved in /models
 
+---
 
-## ⚙️ Requirements & Dependencies
+## ⚙️ Requirements
 
-# Key packages required:
-pandas
-numpy
-scikit-learn
-xgboost
-matplotlib
-seaborn
-streamlit
-joblib
+# Core packages:
+pandas  
+numpy  
+scikit-learn  
+xgboost  
+matplotlib  
+seaborn  
+streamlit  
+joblib  
 
-# Install them all at once:
+# Install all:
 pip install -r requirements.txt
 
+---
 
 ## 🎯 Future Work
 
-# Planned enhancements:
-# - Include more diseases (Diabetes, Heart, Lung)
-# - Use deep learning / ensemble models
-# - Deploy on cloud services (AWS, Heroku)
-# - Add frontend enhancements (charts, explanations)
+# - Add more diseases (Diabetes, Heart, Lung)  
+# - Use deep learning & ensembles  
+# - Cloud deployment (AWS / Heroku)  
+# - Advanced front-end with interactive charts  
 
+---
 
 ## 📂 Usage Example
 
-# 1. Launch the Streamlit app
-# 2. Select a disease (Kidney / Liver / Parkinson’s)
-# 3. Enter patient parameter values
-# 4. Click “Predict” → result displayed + confusion matrix
+# 1. Launch Streamlit app  
+# 2. Select a disease  
+# 3. Enter patient parameters  
+# 4. Get prediction + confusion matrix  
+
+---
+
+## 👨‍💻 Author
+
+**Author**: Wilson  
+GitHub: [wilson-in](https://github.com/wilson-in/mutiple_disease_prediction)  
+License: MIT
