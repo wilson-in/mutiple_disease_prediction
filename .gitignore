@@ -1,0 +1,47 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+
+# Jupyter / Notebooks
+.ipynb_checkpoints/
+
+# Streamlit cache / config
+.streamlit/
+*.log
+
+# IDEs
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Models and large artifacts (optional)
+# Comment out if you want to keep models under version control
+models/*.pkl
+models/*.joblib
+models/*.pickle
+
+# Confusion images and reports (optional)
+# Comment out if you want to keep them in repo
+models/*.png
+models/training_reports.json
+models/metadata.json
+
+# Data (keep raw out of repo)
+data/raw/*
+!data/raw/README.md
+
+# Allow cleaned data (uncomment if you want cleaned data excluded)
+# data/cleaned/*
+
+# Other
+*.env
+*.sqlite
