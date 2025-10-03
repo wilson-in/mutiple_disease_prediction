@@ -1,78 +1,76 @@
-Multiple Disease Prediction System
-A machine learning-based web application that predicts multiple diseases including Diabetes, Heart Disease, and Parkinson's Disease using patient data and symptoms.
+# 🩺 Multiple Disease Prediction System
 
-Features
-Multi-Disease Prediction - Single platform for three different disease predictions
+Multiple Disease Prediction is an advanced machine learning project designed to predict the likelihood of **Kidney Disease, Liver Disease, and Parkinson’s Disease**. The system supports early diagnosis, enhances healthcare provider decision-making, and reduces diagnostic time and cost. It integrates data preprocessing, model training, evaluation, and visualization using Streamlit.
 
-Machine Learning Models - Trained on verified medical datasets
+---
 
-User-Friendly Interface - Simple web interface built with Streamlit
+## 🔧 Tech Stack
 
-Real-time Predictions - Instant results with probability scores
+![Python](https://img.shields.io/badge/Python-3.8%2B-gray?logo=python&logoColor=white&labelColor=3776AB)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Processing-gray?logo=pandas&logoColor=white&labelColor=150458)
+![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-gray?logo=numpy&logoColor=white&labelColor=013243)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML%20Models-gray?logo=scikit-learn&logoColor=white&labelColor=f89939)
+![XGBoost](https://img.shields.io/badge/XGBoost-Boosting-gray?logo=python&logoColor=white&labelColor=4187f6)
+![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-gray?logo=streamlit&logoColor=white&labelColor=FF4B4B)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualizations-gray?logo=matplotlib&logoColor=white&labelColor=11557c)
+![Seaborn](https://img.shields.io/badge/Seaborn-Visualizations-gray?logo=python&logoColor=white&labelColor=8C5E9C)
 
-Privacy Focused - Local processing of sensitive health data
+---
 
-Installation
-Prerequisites
-Python 3.8 or higher
+## 📁 Project Structure
+📂 multiple-disease-prediction
+|
+├── 📁 app/                           # Streamlit application code
+│   └── app.py
+|
+├── 📁 data/
+│   ├── 📁 raw/                       # Original/raw datasets
+│   │   ├── parkinsons.csv
+│   │   ├── kidney_disease.csv
+│   │   └── indian_liver_patient.csv
+│   │
+│   ├── 📁 cleaned/                   # Cleaned/preprocessed datasets
+│   │   ├── parkinsons_preprocessed.csv
+│   │   ├── kidney_preprocessed.csv
+│   │   └── liver_preprocessed.csv
+│
+├── 📁 models/                        # Trained ML models (saved as pickle files)
+│   ├── kidney_model.pkl
+│   ├── liver_model.pkl
+│   └── parkinsons_model.pkl
+|
+├── 📁 src/                           # Source code for preprocessing and training
+│   ├── preprocess_kidney.py
+│   ├── preprocess_liver.py
+│   ├── preprocess_parkinsons.py
+│   └── train_models.py
+|
+├── requirements.txt                  # Python dependencies
+├── README.md                         # Project documentation
+├── .gitignore                        # Ignore unnecessary files in git
+└── LICENSE                           # Open-source license for project
 
-pip package manager
+## 🚀 How to Run
 
-Setup Instructions
-Clone the repository
-
+1. Clone the repository  
 bash
 git clone https://github.com/wilson-in/multiple_disease_prediction.git
-cd multiple_disease_prediction
-Create virtual environment (recommended)
+cd multiple-disease-prediction
 
-bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
 Install dependencies
 
-bash
-pip install -r requirements.txt
-Usage
-Start the application
+bashpip install -r requirements.txt
 
-bash
-streamlit run app.py
-Access the web interface
+Run the Streamlit app
 
-Open your browser and navigate to http://localhost:8501
+bashstreamlit run app/app.py
 
-Make predictions
+📊 Features
 
-Select the disease type from the sidebar
-
-Input the required medical parameters
-
-Click predict to get results
-
-Project Structure
-text
-multiple_disease_prediction/
-├── data/                    # Dataset files
-├── models/                  # Trained ML models
-├── notebooks/               # Jupyter notebooks
-├── src/                     # Source code
-├── app.py                   # Main application
-├── requirements.txt         # Dependencies
-└── README.md                # Documentation
-Machine Learning Models
-Algorithms Used
-Random Forest Classifier
-
-Support Vector Machine (SVM)
-
-Logistic Regression
-
-XGBoost
-
-Model Performance
-Diabetes: Random Forest (92% accuracy)
-
-Heart Disease: SVM (87% accuracy)
-
-Parkinson's: XGBoost (95% accuracy)
+Multi-Disease Prediction: Predicts Kidney, Liver, and Parkinson’s disease probability using user-provided data (symptoms, demographics, test results).
+Data Preprocessing: Manages missing values, encodes categorical features, and scales numerical data for model accuracy.
+Machine Learning Models: Trained with Logistic Regression, Random Forest, and XGBoost for robust predictions.
+Interactive Streamlit App: Allows real-time input of health data with instant probability and risk level outputs.
+Model Evaluation Metrics: Accuracy, Precision, Recall, F1-Score, ROC-AUC.
+Scalable & Secure: Supports multiple users with in-memory data processing for privacy.
+Visual Insights: Displays probability charts and confusion matrices for better understanding.
