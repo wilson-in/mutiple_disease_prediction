@@ -42,9 +42,6 @@ Build a scalable, accurate system to:
 - Metrics: Accuracy, Precision, Recall, F1-score, ROC-AUC.
 - Confusion Matrix.
 
-## Deployment (Optional)
-- Deploy on AWS.
-
 ## Tools
 - **Language**: Python
 - **Libs**: Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn
@@ -77,27 +74,20 @@ Streamlit, Python, Machine Learning, Visualization
 ## Getting Started
 ### Prerequisites
 - Python 3.8+
-- `pip install -r requirements.txt`
+- pip install -r requirements.txt
 
 ### Installation
-1. `git clone https://github.com/wilson-in/multiple_disease_prediction.git`
-2. `cd multiple_disease_prediction`
-3. `python -m venv venv`
-4. Activate: `venv\Scripts\activate` (Windows) or `source venv/bin/activate` (macOS/Linux)
-5. `pip install -r requirements.txt`
+1. git clone https://github.com/wilson-in/multiple_disease_prediction.git
+2. cd multiple_disease_prediction
+3. python -m venv venv
+4. Activate: venv\Scripts\activate (Windows) or source venv/bin/activate (macOS/Linux)
+5. pip install -r requirements.txt
 
 ### Running
-1. `python src/preprocess_kidney.py`
-2. `python src/preprocess_liver.py`
-3. `python src/preprocess_parkinsons.py`
-4. `python src/train_models.py`
-5. `streamlit run app.py` (open `http://localhost:8501`)
+1. python src/preprocess_kidney.py
+2. python src/preprocess_liver.py
+3. python src/preprocess_parkinsons.py
+4. python src/train_models.py
+5. streamlit run app.py (open http://localhost:8501)
 
-## Contributing
-Fork and submit PRs.
 
-## License
-[Add license, e.g., MIT]
-
-## Acknowledgments
-Generated with [https://kome.ai](https://kome.ai)
