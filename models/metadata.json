@@ -1,0 +1,103 @@
+{
+  "Kidney": {
+    "feature_order": [
+      "age",
+      "bp",
+      "bgr",
+      "bu",
+      "sc",
+      "sod",
+      "pot",
+      "hemo"
+    ],
+    "defaults": {
+      "age": 0.2006575457261528,
+      "bp": 0.2781399853959962,
+      "bgr": -0.3407613838663325,
+      "bu": -0.3026520714917309,
+      "sc": -0.3081309697470543,
+      "sod": 0.1202542375288316,
+      "pot": -0.0714989537968751,
+      "hemo": 0.0231864441470974
+    },
+    "model": "Kidney_model.pkl",
+    "scaler": "Kidney_scaler.pkl",
+    "imputer": "Kidney_imputer.pkl"
+  },
+  "Liver": {
+    "feature_order": [
+      "Age",
+      "Gender",
+      "Total_Bilirubin",
+      "Direct_Bilirubin",
+      "Alamine_Aminotransferase",
+      "Aspartate_Aminotransferase",
+      "Albumin"
+    ],
+    "defaults": {
+      "Age": 0.015693635755163,
+      "Gender": 0.5674464422768088,
+      "Total_Bilirubin": -0.3705234446786273,
+      "Direct_Bilirubin": -0.4226903713182646,
+      "Alamine_Aminotransferase": -0.2505350857287891,
+      "Aspartate_Aminotransferase": -0.2352535989134186,
+      "Albumin": -0.0526554836099106
+    },
+    "model": "Liver_model.pkl",
+    "scaler": "Liver_scaler.pkl",
+    "imputer": "Liver_imputer.pkl"
+  },
+  "Parkinsons": {
+    "feature_order": [
+      "MDVP:Fo(Hz)",
+      "MDVP:Fhi(Hz)",
+      "MDVP:Flo(Hz)",
+      "MDVP:Jitter(%)",
+      "MDVP:Jitter(Abs)",
+      "MDVP:RAP",
+      "MDVP:PPQ",
+      "Jitter:DDP",
+      "MDVP:Shimmer",
+      "MDVP:Shimmer(dB)",
+      "Shimmer:APQ3",
+      "Shimmer:APQ5",
+      "MDVP:APQ",
+      "Shimmer:DDA",
+      "NHR",
+      "HNR",
+      "RPDE",
+      "DFA",
+      "spread1",
+      "spread2",
+      "D2",
+      "PPE"
+    ],
+    "defaults": {
+      "MDVP:Fo(Hz)": -0.1317378979195819,
+      "MDVP:Fhi(Hz)": -0.2331437477915046,
+      "MDVP:Flo(Hz)": -0.2766579198733988,
+      "MDVP:Jitter(%)": -0.2647941530920457,
+      "MDVP:Jitter(Abs)": -0.4018994195636312,
+      "MDVP:RAP": -0.2724216360603407,
+      "MDVP:PPQ": -0.2748504045367026,
+      "Jitter:DDP": -0.2736279003908289,
+      "MDVP:Shimmer": -0.3583019134666149,
+      "MDVP:Shimmer(dB)": -0.3151159545100314,
+      "Shimmer:APQ3": -0.2838083399566894,
+      "Shimmer:APQ5": -0.3675741457684029,
+      "MDVP:APQ": -0.344400930195801,
+      "Shimmer:DDA": -0.2841459621027967,
+      "NHR": -0.3271036128670583,
+      "HNR": 0.0450855315047367,
+      "RPDE": -0.0249003336227485,
+      "DFA": 0.0752794111816711,
+      "spread1": -0.0335396012480961,
+      "spread2": -0.0916600505463849,
+      "D2": -0.0531514497805478,
+      "PPE": -0.1390580270896278
+    },
+    "model": "Parkinsons_model.pkl",
+    "scaler": "Parkinsons_scaler.pkl",
+    "imputer": "Parkinsons_imputer.pkl"
+  }
+}
